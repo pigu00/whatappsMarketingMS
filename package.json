@@ -1,0 +1,28 @@
+{
+  "name": "whatappsmarketingms",
+  "version": "1.0.0",
+  "main": "sendWA.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pigu00/whatappsMarketingMS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/pigu00/whatappsMarketingMS/issues"
+  },
+  "homepage": "https://github.com/pigu00/whatappsMarketingMS#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.1"
+  },
+  "description": "",
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.3"
+  }
+}
