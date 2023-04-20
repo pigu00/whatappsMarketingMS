@@ -1,28 +1,27 @@
-// const express = require('express')
-// const app = express()
-// const cors = require('cors')
+import express  from 'express'
+const app = express()
 
-// app.use(cors())
+import dotenv from 'dotenv'
+dotenv.config()
+
+
 import fetch from "node-fetch";
+import { telefonosDestino } from './telefonosDestino.js';
 
-//['542494671799','541162920404','541130895432','542214817486',]
-const telefonos = ['542494671799','541162920404','541130895432','542214817486'];
-
+ const telefonos = telefonosDestino
 for (let i = 0; i < telefonos.length; i++) {
-  console.log(telefonos[i]);
-  var botId = "115810888147278";
-  var phoneNbr = telefonos[i];
-  var bearerToken =
-    "EAADZAWaZCWBNIBAGfyxZC6Mu557Yxj0IyinjH3aWVRqIZAaxLE7xZCATZCASn8toqrDELwLVUF7qvuGEFaQbF4n3Y1m4bpVaQuTvbMK0uuQHdscdgftatiCrV5UqnnkSa8yQHMKgTQsHsbdVLtTJSVIHtMXk4OPdTtqshGx3cgZAWN7RCtOtB8G7oOtbsxxeZCheZCWtkvNkudVG6nWH1KZA40arFFIoqrW9cZD";
+  const botId = process.env.BOTID;
+  const phoneNbr = telefonos[i];
+  const bearerToken = process.env.TOKEN;
   
-  var url = "https://graph.facebook.com/v16.0/" + botId + "/messages";
-  var data = {
+  const url = "https://graph.facebook.com/v16.0/" + botId + "/messages";
+  const data = {
     messaging_product: "whatsapp",
     recipient_type: "individual",
     to: phoneNbr,
     type: "template",
     template: {
-      name: "lalo_sumate",
+      name: "demo_test_envios_lalo_c",
       language: {
         code: "es_AR",
       },
